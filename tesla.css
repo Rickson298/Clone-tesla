@@ -1,0 +1,257 @@
+/* Fontes */
+
+@font-face {
+    font-family: GothamMedium;
+    src:url(../assets/tesla/fonts/GothamMedium.otf)
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url(../assets/tesla/fonts/GothamBookRegular.otf);
+}
+:root {
+    --h1-color: #393c41;
+    --h2-color: #6e7378;
+    --btn-dark-bg: rgba(23, 26, 32, 0.8);
+    --btn-light-bg: rgba(255,255,255, 0.5);
+    --btn-dark-color: #fff;
+    --btn-light-color: #000 ; 
+}
+body {
+    font-family: 'GothamMedium', Helvetica , Arial ;
+    Font-size: 14px;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    
+}
+
+header .logo {
+    width: 120px;
+    margin-left: 20px;
+}
+
+header .middle ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    
+}
+
+
+.middle ul li {
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin: 0px 10px;
+    padding: 20px;
+    transition: all 0.4s 
+    
+}
+
+.middle ul li a {
+    align-self: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+
+.middle ul li:hover {
+border-radius: 30px;
+  background-color: rgba(210, 210, 210, 0.9);
+}
+
+
+
+
+.rightside ul {
+    display: flex;    
+}
+
+.rightside ul li {
+    margin: 0px 10px;
+    list-style: none;
+}
+
+.rightside a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#000
+}
+
+header .menu {
+    display: flex;
+
+} 
+header .menu--icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    width: 18px;    
+    height: 16px;   
+}
+
+header .menu--icon div {
+    height: 2px;
+    background-color: #000;
+    
+}
+
+/*main*/
+
+main {
+    background-image: url(assets/tesla/images/bg.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 100vh;
+}
+
+main .info {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--h1-color);
+}
+
+main h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--h2-color);
+    font-family: 'GothamBook';
+
+}
+
+.info a {
+    color: var(--h1-color);
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 30px;
+    right: 0;  
+}
+
+footer .buttons--area {
+    display: flex;
+    justify-content: center;
+}
+
+footer .buttons--area a {
+    display: block;
+    width: 220px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0px 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: center;
+    
+}
+
+footer .btn--dark {
+    background-color: var(--btn-dark-bg);
+    color: var(--btn-dark-color);
+    transition: all 0.5s linear;
+    transition-property: border 9s linear;
+}
+
+.btn--dark:hover {
+    background-color: var(--btn-light-bg);
+    border: 1px blue solid;
+    color: black;
+    
+}
+
+footer .btn--light {
+    background-color: var(--btn-light-bg);
+    color: var(--btn-light-color);
+
+}
+
+
+
+
+@keyframes arrow {
+    0% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 15px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+
+}
+
+
+footer .arrow--area {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    margin-top: 30px;
+}
+
+footer .arrow {
+    height: 15px;
+    animation-name: arrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* MEDIA QUERY*/
+ 
+@media (max-width:1200px) {
+
+    header .middle {
+        display: none;
+    }
+
+    header .rightside li {
+        display: none;
+    }
+    
+     header .rightside li.menu {
+        display: block;
+    }
+}
+
+@media (max-width:600px) {
+    
+    .buttons--area {
+        flex-direction: column;
+        align-items: center;
+    }
+   footer .buttons--area a {
+   
+       
+        width: calc(100vw - 60px);
+
+
+
+    }
+}
