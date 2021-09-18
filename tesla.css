@@ -298,16 +298,17 @@ footer .arrow {
     display: flex;
     margin-top: 25px;
     height: 25px;
-    width: 10%;
+    width: 25px;
     cursor:pointer;
     border: 1px solid #ccc;
     justify-content: center;
     align-items: center;
+    transition: all ease-in-out 0.2s;
 }
 
 .menu--right ul li:hover{
-    width: 50%;
-    transition: all ease-in-out 0.2s;
+    width: 50px;
+
     border-radius: 15px;
 }
 
