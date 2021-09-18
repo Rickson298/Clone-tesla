@@ -74,8 +74,6 @@ border-radius: 30px;
 }
 
 
-
-
 .rightside ul {
     display: flex;    
 }
@@ -93,6 +91,7 @@ border-radius: 30px;
 
 header .menu {
     display: flex;
+   
 
 } 
 header .menu--icon {
@@ -156,6 +155,7 @@ footer {
 footer .buttons--area {
     display: flex;
     justify-content: center;
+    z-index: 1000;
 }
 
 footer .buttons--area a {
@@ -169,27 +169,36 @@ footer .buttons--area a {
     padding: 15px;
     border-radius: 30px;
     text-align: center;
+    z-index: 1;
     
 }
 
-footer .btn--dark {
+.btn--dark {
     background-color: var(--btn-dark-bg);
     color: var(--btn-dark-color);
-    transition: all 0.5s linear;
-    transition-property: border 9s linear;
+    transition: all 0.3s ease-in-out;
+    
+    
 }
 
 .btn--dark:hover {
     background-color: var(--btn-light-bg);
-    border: 1px blue solid;
-    color: black;
-    
+    box-shadow: red 5px 5px 5px;
+    color: black;   
+}
+
+
+
+.btn--light:hover  {
+    background-color: var(--btn-dark-bg);
+    color: var(--btn-dark-color); 
+    box-shadow:  #ccc 5px 5px 5px; 
 }
 
 footer .btn--light {
     background-color: var(--btn-light-bg);
     color: var(--btn-light-color);
-
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -254,4 +263,56 @@ footer .arrow {
 
 
     }
+}
+
+.menu--right{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    height: 750px;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    transition: all linear 0.2s;
+    color: white;
+    right: 0;
+    flex-direction: column;
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+
+.menu--right ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 15px;
+    
+    
+}
+
+.menu--right ul li {
+    color: black;
+    display: flex;
+    margin-top: 25px;
+    height: 25px;
+    width: 10%;
+    cursor:pointer;
+    border: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu--right ul li:hover{
+    width: 50%;
+    transition: all ease-in-out 0.2s;
+    border-radius: 15px;
+}
+
+
+.menu--right p {
+    padding-left: 15px;
+    color: black;
 }
