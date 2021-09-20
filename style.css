@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: GothamMedium;
-    src:url(../assets/tesla/fonts/GothamMedium.otf)
+    src:url(./assets/tesla/fonts/GothamMedium.otf)
 }
 
 @font-face {
     font-family: GothamBook;
-    src: url(../assets/tesla/fonts/GothamBookRegular.otf);
+    src: url(./assets/tesla/fonts/GothamBookRegular.otf);
 }
 :root {
     --h1-color: #393c41;
